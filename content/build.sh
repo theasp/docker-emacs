@@ -2,13 +2,11 @@
 set -ex
 
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 873503A090750CDAEB0754D93FF0E01EEAAFC9CD
-
 cat >> /etc/apt/sources.list <<EOF
 deb http://ppa.launchpad.net/kelleyk/emacs/ubuntu xenial main
 EOF
 
-apt-get update
-
+apt-get update -q
 apt-get install -q -y \
         emacs25 \
         fonts-dejavu-extra \
