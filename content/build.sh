@@ -30,13 +30,14 @@ apt-get install -q -y \
         fonts-symbola \
         git \
         gnupg2 \
+        hunspell \
+        hunspell-en-ca \
+        hunspell-en-us \
         littler \
         openjdk-8-jdk \
         r-recommended \
         subversion \
         supervisor \
-        texlive \
-        texlive-xetex \
         ttf-anonymous-pro \
         ttf-bitstream-vera \
         ttf-ubuntu-font-family \
