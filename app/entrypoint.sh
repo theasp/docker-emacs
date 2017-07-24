@@ -20,6 +20,9 @@ adduser --disabled-password --home ${USER_HOME} --shell ${USER_SHELL} --uid ${US
 # Add the user to the sudo group
 adduser ${USER_NAME} sudo
 
+# Make a log directory
+mkdir /app/log
+
 # Make the /app directory owned by user
 chown -R ${USER_NAME}:${USER_GROUP} /app 
 
