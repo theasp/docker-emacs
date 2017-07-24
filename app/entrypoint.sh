@@ -25,4 +25,4 @@ chown -R ${USER_NAME}:${USER_GROUP} /app
 
 # Change the user's password
 chpasswd -e <<<"${USER_NAME}:${USER_PASSWORD}"
-su -c 'supervisord -c /app/supervisord.conf' ${USER_NAME}
+exec su -c 'supervisord -c /app/supervisord.conf' ${USER_NAME}
