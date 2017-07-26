@@ -1,6 +1,7 @@
 [program:emacs-daemon]
 priority=50
 user=${USER}
+directory=${HOME}
 environment=SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
 command=/app/signal-wrapper.sh "emacs --daemon" "true" "pgrep -u $(id -u) -f -x 'emacs --daemon' > /dev/null"
 redirect_stderr=true
