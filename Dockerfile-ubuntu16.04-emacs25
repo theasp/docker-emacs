@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM theasp/userlayer:ubuntu16.04
 ARG http_proxy
 MAINTAINER Andrew Phillips <theasp@gmail.com>
 RUN set -ex; \
@@ -42,5 +42,4 @@ RUN set -ex; \
         ttf-unifont \
         ttf-xfree86-nonfree \
         w3m
-COPY app /app
-CMD ["/app/entrypoint.sh"]
+COPY app/ /app/
