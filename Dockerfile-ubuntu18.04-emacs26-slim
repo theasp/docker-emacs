@@ -1,6 +1,6 @@
 FROM theasp/userlayer:ubuntu18.04
 RUN set -ex; \
-    source /etc/lsb-release; \
+    . /etc/lsb-release; \
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 873503A090750CDAEB0754D93FF0E01EEAAFC9CD; \
     echo deb http://ppa.launchpad.net/kelleyk/emacs/ubuntu ${DISTRIB_CODENAME} main >> /etc/apt/sources.list; \
     apt-get update -q; \
