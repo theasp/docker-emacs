@@ -1,6 +1,9 @@
 FROM theasp/userlayer:ubuntu18.04
 RUN set -ex; \
     . /etc/lsb-release; \
+    echo 'APT::Install-Recommends "0";' > /etc/apt/apt.conf.d/99no-recommends; \
+    apt-get update -q; \
+    apt-get install -q -y gnupg2; \
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 873503A090750CDAEB0754D93FF0E01EEAAFC9CD; \
     echo deb http://ppa.launchpad.net/kelleyk/emacs/ubuntu ${DISTRIB_CODENAME} main >> /etc/apt/sources.list; \
     apt-get update -q; \
